@@ -1,0 +1,13 @@
+package com.example.useriput.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class InputController {
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "index";
+	}
+}

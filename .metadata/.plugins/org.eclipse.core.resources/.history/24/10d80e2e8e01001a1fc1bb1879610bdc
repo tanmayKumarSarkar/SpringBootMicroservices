@@ -1,0 +1,14 @@
+package com.example.useriput.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.useriput.entity.User;
+@Service
+public class InputService {
+
+	public void validate(User user) {
+		
+		
+	}
+
+}

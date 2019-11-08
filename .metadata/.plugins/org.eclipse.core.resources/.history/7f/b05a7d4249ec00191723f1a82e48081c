@@ -1,0 +1,5 @@
+package com.example.useriput.entity;
+
+public class User {
+
+}

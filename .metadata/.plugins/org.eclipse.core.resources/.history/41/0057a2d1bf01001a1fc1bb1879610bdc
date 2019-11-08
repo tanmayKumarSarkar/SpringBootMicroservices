@@ -1,0 +1,23 @@
+package com.example.usermatch.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.usermatch.entity.User;
+
+@Controller
+public class InputController {
+
+	@RequestMapping(value="/validate", method = RequestMethod.POST)
+	public String validate() {
+		return "";
+	}
+	
+	@RequestMapping(value="/register", method = RequestMethod.POST)
+	public String register(@RequestBody User user) {
+		System.out.println(user);
+		return "";
+	}
+}
