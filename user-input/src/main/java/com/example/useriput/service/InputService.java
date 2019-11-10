@@ -14,22 +14,27 @@ import com.example.useriput.entity.User;
 @Service
 public class InputService {
 
-	public void validate(User user) {
-		
-		
+	final String uri = "http://localhost:5002";
+	
+	public User validate(User user) {
+		String url = uri+"/validate";
+	     
+	    RestTemplate restTemplate = new RestTemplate();
+	    User usr = restTemplate.postForObject(url, user, User.class);
+	    System.out.println(usr);
+	    return usr;
 	}
 
-	public void register(User user) {
-		final String uri = "http://localhost:5002/register";
+	public User register(User user) {
+		String url = uri+"/register";
 	     
 	    RestTemplate restTemplate = new RestTemplate();
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-	    HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
-	     
-//	    ResponseEntity<String> result = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-	    ResponseEntity result = restTemplate.postForObject(uri, user, ResponseEntity.class);
-	    System.out.println(result);
+//	    HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
+	    User usr = restTemplate.postForObject(url, user, User.class);
+	    System.out.println(usr);
+	    return usr;
 	}
 
 }

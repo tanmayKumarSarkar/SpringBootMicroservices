@@ -15,6 +15,9 @@
         <input type="submit" value="Login" />
         <br>
         <br>
+        ${erruser}
+        <br>
+        <br>
     </form>
     <a href="/register">Click Here To Register</a>
 </body>

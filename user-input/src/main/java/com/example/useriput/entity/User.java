@@ -6,6 +6,16 @@ public class User {
 	private String userId;
 	private String password;
 	
+	public User() {
+		super();
+	}
+		
+	public User(String userId, String password) {
+		super();
+		this.userId = userId;
+		this.password = password;
+	}
+
 	public String getUserId() {
 		return userId;
 	}

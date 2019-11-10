@@ -11,6 +11,10 @@ public class User {
 	private String userId;
 	private String password;
 	
+	public User() {
+		super();
+	}
+	
 	public String getUserId() {
 		return userId;
 	}
